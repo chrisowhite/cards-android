@@ -1,18 +1,15 @@
-package com.cards.cah;
+package com.cards.cah.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
+import com.cards.cah.CardsApplication;
+import com.cards.cah.R;
 import com.cards.cah.models.Game;
-import com.cards.cah.models.WhiteCard;
-
-import java.util.ArrayList;
 
 
-public class MainActivity extends BaseDrawerActivity{
+public class MainActivity extends BaseActivity {
 
     private Game game;
 
@@ -22,7 +19,7 @@ public class MainActivity extends BaseDrawerActivity{
     }
 
     @Override
-    protected int getMenuItemArrayId() {
+    public int getMenuItemArrayId() {
         return R.array.nav_items;
     }
 

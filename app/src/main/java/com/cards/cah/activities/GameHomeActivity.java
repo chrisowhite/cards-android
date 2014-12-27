@@ -1,14 +1,15 @@
-package com.cards.cah;
+package com.cards.cah.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.cards.cah.R;
 import com.cards.cah.models.Game;
 
 
-public class GameHomeActivity extends BaseDrawerActivity {
+public class GameHomeActivity extends BaseGameActivity {
 
     @Override
     protected int getDrawerLayoutViewId() {
@@ -16,7 +17,7 @@ public class GameHomeActivity extends BaseDrawerActivity {
     }
 
     @Override
-    protected int getMenuItemArrayId() {
+    public int getMenuItemArrayId() {
         return R.array.nav_items;
     }
 
@@ -29,9 +30,7 @@ public class GameHomeActivity extends BaseDrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CardsApplication app = (CardsApplication)getApplicationContext();
-        Game game = app.getCurrentGame();
-
+        Game game = getGame();
         TextView questionText = (TextView)findViewById(R.id.question_card_text);
         questionText.setText(game.getCurrentQuestion().getCardText());
     }

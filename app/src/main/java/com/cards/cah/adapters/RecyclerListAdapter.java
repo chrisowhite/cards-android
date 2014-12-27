@@ -1,4 +1,4 @@
-package com.cards.cah;
+package com.cards.cah.adapters;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -6,11 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.cards.cah.R;
+
 import java.util.List;
 
-/**
- * Created by Chris on 12/24/2014.
- */
 public class RecyclerListAdapter<TDataItem> extends RecyclerView.Adapter<RecyclerListAdapter.CardViewHolder<TDataItem>> {
     private List<TDataItem> dataSet;
     private View.OnClickListener clickListener;
@@ -25,7 +25,7 @@ public class RecyclerListAdapter<TDataItem> extends RecyclerView.Adapter<Recycle
     }
 
     @Override
-    public CardViewHolder onCreateViewHolder(ViewGroup parent,
+    public CardViewHolder<TDataItem> onCreateViewHolder(ViewGroup parent,
                                              int viewType) {
         // Get Card
         CardView cardView = (CardView) LayoutInflater.from(parent.getContext())
@@ -34,11 +34,11 @@ public class RecyclerListAdapter<TDataItem> extends RecyclerView.Adapter<Recycle
         // Hook up card selection handler
         cardView.setOnClickListener(clickListener);
 
-        return new CardViewHolder<TDataItem>(cardView);
+        return new CardViewHolder<>(cardView);
     }
 
     @Override
-    public void onBindViewHolder(CardViewHolder holder, int position) {
+    public void onBindViewHolder(CardViewHolder<TDataItem> holder, int position) {
         View view = holder.cardView;
         TextView cardText = (TextView)view.findViewById(R.id.card_text);
 

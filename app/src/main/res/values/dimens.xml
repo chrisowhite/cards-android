@@ -14,4 +14,9 @@
     <dimen name="card_text_size">32dp</dimen>
     <dimen name="elevation_low">3dp</dimen>
     <dimen name="question_preview_text_size">22dp</dimen>
+
+    <dimen name="headerbar_elevation">4dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="fab_elevation">8dp</dimen>
+    <dimen name="navdrawer_width">240dp</dimen>
 </resources>

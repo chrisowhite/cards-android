@@ -1,25 +1,18 @@
 package com.cards.cah.models;
 
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * Created by Chris on 12/24/2014.
- */
 public class Hand implements Parcelable {
     private static final String ARG_CARD_LIST = "CARD_LIST";
 
-    private Map<UUID, WhiteCard> cards;
+    private Map<UUID, AnswerCard> cards;
 
     public Hand() {
         cards = new HashMap<>();
@@ -27,20 +20,19 @@ public class Hand implements Parcelable {
 
     public Hand(Parcel in) {
         this();
-        List<WhiteCard> cardList = new ArrayList<>();
-        in.readTypedList(cardList, WhiteCard.CREATOR);
+        List<AnswerCard> cardList = new ArrayList<>();
+        in.readTypedList(cardList, AnswerCard.CREATOR);
 
         // Populate card collection
-        for(Iterator<WhiteCard> i = cardList.iterator(); i.hasNext();) {
-            addCard(i.next());
-        }
+        for(AnswerCard card: cardList)
+            addCard(card);
     }
 
-    public List<WhiteCard> getCards() {
-        return new ArrayList(cards.values());
+    public List<AnswerCard> getCards() {
+        return new ArrayList<>(cards.values());
     }
 
-    public void addCard(WhiteCard card) {
+    public void addCard(AnswerCard card) {
         cards.put(card.getId(), card);
     }
 

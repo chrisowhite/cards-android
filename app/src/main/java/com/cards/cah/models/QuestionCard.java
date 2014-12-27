@@ -2,20 +2,23 @@ package com.cards.cah.models;
 
 import java.util.UUID;
 
-/**
- * Created by Chris on 12/24/2014.
- */
-public class BlackCard {
+public class QuestionCard {
     private UUID id;
     private String cardText;
+    private short answerCount;
 
-    public BlackCard(UUID id, String cardText) {
+    public QuestionCard(UUID id, String cardText, short answerCount) {
         this.id = id;
         this.cardText = cardText;
+        this.answerCount = answerCount;
     }
 
     public String getCardText() {
         return cardText;
+    }
+
+    public short getAnswerCount() {
+        return answerCount;
     }
 
     public UUID getId() {

@@ -3,10 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <LinearLayout android:id="@+id/content_frame"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <include layout="@layout/nav_toolbar" />
 
         <TextView
             android:id="@+id/question_card_text"
@@ -21,9 +24,5 @@
             android:onClick="onSelectAnswerClick"/>
     </LinearLayout>
 
-    <fragment android:id="@+id/nav_drawer_fragment"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:name="com.cards.cah.NavDrawerFragment"/>
+    <include layout="@layout/nav_drawer" />
 </android.support.v4.widget.DrawerLayout>

@@ -11,6 +11,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <include layout="@layout/nav_toolbar" />
+
             <android.support.v7.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -35,11 +37,12 @@
                     android:textColor="@android:color/white"/>
             </android.support.v7.widget.CardView>
 
-            <FrameLayout
+            <LinearLayout
                 android:id="@+id/selected_white_cards"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"></FrameLayout>
+                android:orientation="vertical"
+                android:layout_weight="1"></LinearLayout>
         </LinearLayout>
         <ImageButton
             android:layout_width="@dimen/round_button_diameter"
@@ -56,9 +59,5 @@
             android:onClick="onShowWhiteCardListClick"/>
     </FrameLayout>
 
-    <fragment android:id="@+id/nav_drawer_fragment"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:name="com.cards.cah.NavDrawerFragment"/>
+    <include layout="@layout/nav_drawer" />
 </android.support.v4.widget.DrawerLayout>

@@ -5,19 +5,16 @@ import android.os.Parcelable;
 
 import java.util.UUID;
 
-/**
- * Created by Chris on 12/24/2014.
- */
-public class WhiteCard implements Parcelable {
+public class AnswerCard implements Parcelable {
     private UUID id;
     private String cardText;
 
-    public WhiteCard(UUID id, String cardText) {
+    public AnswerCard(UUID id, String cardText) {
         this.id = id;
         this.cardText = cardText;
     }
 
-    public WhiteCard(Parcel in) {
+    public AnswerCard(Parcel in) {
         String[] data = new String[2];
 
         in.readStringArray(data);
@@ -51,12 +48,12 @@ public class WhiteCard implements Parcelable {
     }
 
     public static final Creator CREATOR = new Creator() {
-        public WhiteCard createFromParcel(Parcel in) {
-            return new WhiteCard(in);
+        public AnswerCard createFromParcel(Parcel in) {
+            return new AnswerCard(in);
         }
 
-        public WhiteCard[] newArray(int size) {
-            return new WhiteCard[size];
+        public AnswerCard[] newArray(int size) {
+            return new AnswerCard[size];
         }
     };
 }
