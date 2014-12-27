@@ -20,21 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="1"/>
         </LinearLayout>
-        <ImageButton
-            android:layout_width="@dimen/round_button_diameter"
-            android:layout_height="@dimen/round_button_diameter"
-            android:id="@+id/button3"
-            android:layout_gravity="start|bottom"
-            android:src="@drawable/collections_view_as_list"
-            android:layout_marginBottom="@dimen/add_button_margin"
-            android:layout_marginStart="@dimen/add_button_margin"
-            android:layout_marginLeft="@dimen/add_button_margin"
-            android:tint="@android:color/white"
-            android:elevation="@dimen/fab_elevation"
-            android:background="@drawable/circle_button"
-            android:onClick="onShowWhiteCardListClick"/>
     </FrameLayout>
 
     <include layout="@layout/nav_drawer" />
