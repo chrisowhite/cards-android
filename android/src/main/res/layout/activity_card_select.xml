@@ -9,28 +9,7 @@
         android:orientation="vertical">
 
         <include layout="@layout/nav_toolbar" />
-
-        <android.support.v7.widget.CardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/black_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardBackgroundColor="@android:color/black">
-
-            <TextView
-                android:id="@+id/question_card_text"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:paddingTop="@dimen/card_padding_top_bottom"
-                android:paddingBottom="@dimen/card_padding_top_bottom"
-                android:paddingLeft="@dimen/card_padding"
-                android:paddingRight="@dimen/card_padding"
-                android:text="Sample question card text..."
-                android:textSize="@dimen/question_preview_text_size"
-                android:textColor="@android:color/white"/>
-        </android.support.v7.widget.CardView>
+        <include layout="@layout/question_card_preview" />
 
         <FrameLayout
             android:id="@+id/content_frame"

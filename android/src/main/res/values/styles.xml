@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Theme.CAH.Base" parent="Theme.AppCompat">
+    <style name="Theme.Cards.Base" parent="Theme.AppCompat.Light">
         <item name="actionBarIconColor">#fff</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -12,10 +12,10 @@
         <!--<item name="android:windowBackground">@android:color/white</item>-->
     </style>
 
-    <style name="Theme.CAH" parent="Theme.CAH.Base" />
+    <style name="Theme.Cards" parent="Theme.Cards.Base" />
 
-    <style name="ActionBarThemeOverlay" parent="">
-        <item name="android:textColorPrimary">#fff</item>
+    <style name="ActionBarThemeOverlay">
+        <item name="android:textColorPrimary">#000</item>
         <item name="colorControlNormal">?actionBarIconColor</item>
         <item name="colorControlHighlight">#3fff</item>
     </style>
@@ -24,7 +24,54 @@
 
     <style name="HeaderBar">
         <item name="android:background">?colorPrimary</item>
-        <item name="android:elevation">@dimen/headerbar_elevation</item>
+        <item name="android:title">Header Bar</item>
+        <item name="elevation">@dimen/headerbar_elevation</item>
+    </style>
+
+    <style name="Card">
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/card_margin</item>
+        <item name="android:layout_marginBottom">@dimen/card_margin</item>
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="CardText">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/card_padding</item>
+        <item name="android:paddingBottom">@dimen/card_padding</item>
+        <item name="android:paddingLeft">@dimen/card_padding</item>
+        <item name="android:paddingRight">@dimen/card_padding</item>
+        <item name="android:textSize">@dimen/card_text_size</item>
+        <item name="android:text">@string/sample_card_text</item>
+    </style>
+
+    <style name="AnswerCard" parent="Card">
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="AnswerCardText" parent="CardText">
+        <item name="android:textSize">@dimen/card_text_size</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="QuestionCard" parent="Card">
+        <item name="cardBackgroundColor">@android:color/black</item>
+    </style>
+
+    <style name="QuestionCardText" parent="CardText">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="QuestionCardPreview" parent="QuestionCard">
+    </style>
+
+    <style name="QuestionCardPreviewText" parent="QuestionCardText">
+        <item name="android:textSize">@dimen/question_preview_text_size</item>
+        <item name="android:paddingTop">@dimen/card_padding_top_bottom</item>
+        <item name="android:paddingBottom">@dimen/card_padding_top_bottom</item>
     </style>
 
 </resources>

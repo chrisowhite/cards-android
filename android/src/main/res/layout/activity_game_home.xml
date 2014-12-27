@@ -10,12 +10,7 @@
         android:layout_height="match_parent">
 
         <include layout="@layout/nav_toolbar" />
-
-        <TextView
-            android:id="@+id/question_card_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/card_text_size"/>
+        <include layout="@layout/question_card" />
 
         <Button
             android:layout_width="match_parent"

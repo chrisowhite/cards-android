@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question_card"
+    style="@style/QuestionCard">
+
+    <TextView
+        android:id="@+id/question_card_text"
+        style="@style/QuestionCardText"/>
+</android.support.v7.widget.CardView>

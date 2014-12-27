@@ -16,4 +16,6 @@
     <string name="title_activity_card_select">Select Answer</string>
     <string name="title_activity_selected_answer">Selected Answer</string>
 
+    <string name="sample_card_text">Sample question/answer card text.</string>
+
 </resources>

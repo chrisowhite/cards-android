@@ -11,8 +11,6 @@ import com.cards.qa.models.Game;
 
 public class MainActivity extends BaseActivity {
 
-    private Game game;
-
     @Override
     protected int getDrawerLayoutViewId() {
         return R.id.main_layout;
@@ -32,7 +30,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         CardsApplication app = (CardsApplication)getApplicationContext();
-        game = app.getCurrentGame();
+        Game game = app.getCurrentGame();
         if (game == null) {
             game = new Game();
             app.setGame(game);

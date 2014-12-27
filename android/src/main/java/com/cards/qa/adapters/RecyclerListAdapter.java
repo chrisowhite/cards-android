@@ -29,7 +29,7 @@ public class RecyclerListAdapter<TDataItem> extends RecyclerView.Adapter<Recycle
                                              int viewType) {
         // Get Card
         CardView cardView = (CardView) LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.white_card, parent, false);
+                                .inflate(R.layout.answer_card, parent, false);
 
         // Hook up card selection handler
         cardView.setOnClickListener(clickListener);
