@@ -13,6 +13,9 @@ import com.cards.qa.models.Game;
 import com.cards.qa.models.AnswerCard;
 import com.cards.qa.models.QuestionCard;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class SelectedAnswerActivity extends BaseGameActivity implements AnswerCardListFragment.OnFragmentInteractionListener {
 
@@ -50,11 +53,15 @@ public class SelectedAnswerActivity extends BaseGameActivity implements AnswerCa
         Game game = getGame();
 
         QuestionCard questionCard = game.getCurrentQuestion();
+
+        short answerCount = questionCard.getAnswerCount();
+        ArrayList<AnswerCard> selectedAnswers = game.getSelectedAnswerCards();
+
         TextView questionText = (TextView)findViewById(R.id.question_card_text);
         questionText.setText(questionCard.getCardText());
 
         FragmentManager fragmentManager = getFragmentManager();
-        answerCardListFragment = AnswerCardListFragment.newInstance(game.getSelectedAnswerCards(), false, false);
+        answerCardListFragment = AnswerCardListFragment.newInstance(selectedAnswers, true, false);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.selected_white_cards, answerCardListFragment);
         fragmentTransaction.commit();
@@ -62,11 +69,9 @@ public class SelectedAnswerActivity extends BaseGameActivity implements AnswerCa
 
     @Override
     public void onCardSelect(AnswerCard card) {
-        // do nothing
-    }
-
-    public void onShowWhiteCardListClick(View view) {
         Intent intent = new Intent(this, CardSelectActivity.class);
+        short answerIndex = getGame().getSelectedAnswerLocation(card);
+        intent.putExtra(CardSelectActivity.ARG_ANSWER_INDEX, answerIndex);
         startActivity(intent);
     }
 }

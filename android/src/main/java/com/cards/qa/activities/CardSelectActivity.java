@@ -15,7 +15,10 @@ import com.cards.qa.models.AnswerCard;
 
 public class CardSelectActivity extends BaseGameActivity implements AnswerCardListFragment.OnFragmentInteractionListener {
 
+    public static final String ARG_ANSWER_INDEX = "ARG_ANSWER_INDEX";
+
     private AnswerCardListFragment answerCardListFragment;
+    private short answerIndex = -1;
 
     @Override
     protected int getDrawerLayoutViewId() {
@@ -36,6 +39,10 @@ public class CardSelectActivity extends BaseGameActivity implements AnswerCardLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent intent = getIntent();
+        if (intent.hasExtra(ARG_ANSWER_INDEX))
+            answerIndex = intent.getShortExtra(ARG_ANSWER_INDEX, (short)-1);
+
         Game game = getGame();
         QuestionCard questionCard = game.getCurrentQuestion();
         TextView questionCardText = (TextView)findViewById(R.id.question_card_text);
@@ -50,7 +57,10 @@ public class CardSelectActivity extends BaseGameActivity implements AnswerCardLi
 
     @Override
     public void onCardSelect(AnswerCard card) {
-        getGame().addSelectedAnswer(card);
+        if (answerIndex >= 0)
+            getGame().setSelectedAnswer(answerIndex, card);
+        else
+            getGame().addSelectedAnswer(card);
 
         Intent intent = new Intent(this, SelectedAnswerActivity.class);
         finish();

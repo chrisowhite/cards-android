@@ -45,8 +45,12 @@ public class Game {
         return !(selectedCards.size() == currentQuestion.getAnswerCount());
     }
 
-    public int getSelectedAnswerLocation(AnswerCard card) {
-        return selectedCards.indexOf(card);
+    public short getSelectedAnswerLocation(AnswerCard card) {
+        return (short)selectedCards.indexOf(card);
+    }
+
+    public void setSelectedAnswer(short answerIndex, AnswerCard card) {
+        selectedCards.set(answerIndex, card);
     }
 
     public int getSelectedAnswerCount() {
