@@ -1,4 +1,4 @@
-package com.cards.cah.models;
+package com.cards.qa.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,4 +1,4 @@
-package com.cards.cah.activities;
+package com.cards.qa.activities;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cards.cah.R;
+import com.cards.qa.R;
 
 public abstract class BaseActivity extends ActionBarActivity {
 

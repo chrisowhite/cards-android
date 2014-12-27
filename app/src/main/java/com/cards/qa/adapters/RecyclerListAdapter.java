@@ -1,4 +1,4 @@
-package com.cards.cah.adapters;
+package com.cards.qa.adapters;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cards.cah.R;
+import com.cards.qa.R;
 
 import java.util.List;
 

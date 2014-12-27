@@ -1,8 +1,8 @@
-package com.cards.cah.dummy;
+package com.cards.qa.dummy;
 
-import com.cards.cah.models.AnswerCard;
-import com.cards.cah.models.QuestionCard;
-import com.cards.cah.models.Hand;
+import com.cards.qa.models.AnswerCard;
+import com.cards.qa.models.QuestionCard;
+import com.cards.qa.models.Hand;
 
 import java.util.UUID;
 

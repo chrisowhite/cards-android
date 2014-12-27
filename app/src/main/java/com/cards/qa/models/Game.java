@@ -1,6 +1,6 @@
-package com.cards.cah.models;
+package com.cards.qa.models;
 
-import com.cards.cah.dummy.DummyContent;
+import com.cards.qa.dummy.DummyContent;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.cards.cah.activities;
+package com.cards.qa.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.cards.cah.R;
-import com.cards.cah.fragments.AnswerCardListFragment;
-import com.cards.cah.models.QuestionCard;
-import com.cards.cah.models.Game;
-import com.cards.cah.models.AnswerCard;
+import com.cards.qa.R;
+import com.cards.qa.fragments.AnswerCardListFragment;
+import com.cards.qa.models.QuestionCard;
+import com.cards.qa.models.Game;
+import com.cards.qa.models.AnswerCard;
 
 
 public class CardSelectActivity extends BaseGameActivity implements AnswerCardListFragment.OnFragmentInteractionListener {

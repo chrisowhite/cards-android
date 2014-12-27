@@ -1,4 +1,4 @@
-package com.cards.cah;
+package com.cards.qa;
 
 import android.content.Context;
 import android.content.res.TypedArray;

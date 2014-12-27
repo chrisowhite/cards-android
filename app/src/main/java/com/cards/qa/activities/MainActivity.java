@@ -1,12 +1,12 @@
-package com.cards.cah.activities;
+package com.cards.qa.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.cards.cah.CardsApplication;
-import com.cards.cah.R;
-import com.cards.cah.models.Game;
+import com.cards.qa.CardsApplication;
+import com.cards.qa.R;
+import com.cards.qa.models.Game;
 
 
 public class MainActivity extends BaseActivity {

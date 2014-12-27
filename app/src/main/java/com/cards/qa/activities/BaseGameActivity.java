@@ -1,9 +1,9 @@
-package com.cards.cah.activities;
+package com.cards.qa.activities;
 
 import android.os.Bundle;
 
-import com.cards.cah.CardsApplication;
-import com.cards.cah.models.Game;
+import com.cards.qa.CardsApplication;
+import com.cards.qa.models.Game;
 
 public abstract class BaseGameActivity extends BaseActivity {
     private CardsApplication app;

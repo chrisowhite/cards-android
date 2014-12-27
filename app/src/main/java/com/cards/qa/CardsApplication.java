@@ -1,8 +1,8 @@
-package com.cards.cah;
+package com.cards.qa;
 
 import android.app.Application;
 
-import com.cards.cah.models.Game;
+import com.cards.qa.models.Game;
 
 /**
  * Created by Chris on 12/25/2014.

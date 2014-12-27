@@ -1,4 +1,4 @@
-package com.cards.cah.models;
+package com.cards.qa.models;
 
 import java.util.UUID;
 

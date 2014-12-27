@@ -1,4 +1,4 @@
-package com.cards.cah.fragments;
+package com.cards.qa.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.cards.cah.R;
-import com.cards.cah.adapters.RecyclerListAdapter;
-import com.cards.cah.models.AnswerCard;
+import com.cards.qa.R;
+import com.cards.qa.adapters.RecyclerListAdapter;
+import com.cards.qa.models.AnswerCard;
 
 import java.util.ArrayList;
 import java.util.List;
