@@ -1,6 +1,7 @@
 package com.cards.qa.models;
 
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public class QuestionCard {
     private UUID id;
@@ -23,5 +24,9 @@ public class QuestionCard {
 
     public UUID getId() {
         return id;
+    }
+
+    public boolean getIsFillInTheBlank() {
+        return Pattern.compile("_+").matcher(cardText).find();
     }
 }
