@@ -7,11 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.text.style.BackgroundColorSpan;
-import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
-import android.view.View;
 import android.widget.TextView;
 
 import com.cards.qa.R;
@@ -19,10 +16,8 @@ import com.cards.qa.fragments.AnswerCardListFragment;
 import com.cards.qa.models.Game;
 import com.cards.qa.models.AnswerCard;
 import com.cards.qa.models.QuestionCard;
-import com.cards.qa.text.style.ClickableAnswerSpan;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
